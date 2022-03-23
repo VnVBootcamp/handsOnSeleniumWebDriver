@@ -48,7 +48,7 @@ public class TestNG_ExampleTests extends BaseTest implements IExecutionListener 
             /* Click on the first result which will open up the LambdaTest homepage */
 //            WebElement lt_link = webdriver.findElement(By.xpath("//h1[.='Maestrías en Línea Oficiales SEP - Landings UNIR']"));
 //            lt_link.click();
-            Thread.sleep(5000);
+            Thread.sleep(10000);
 
             String curr_window_title = webdriver.getTitle();
             Assert.assertEquals(curr_window_title, exp_title);
