@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestNG Group Test" thread-count="4" parallel="methods">
+    <!-- Tested in the Chrome instance -->
+    <parameter name="environment" value="local"/>
+    <test name="Search" verbose="2" preserve-order="true" enabled="true">
+        <groups>
+            <run>
+                <include name = "SearchTests"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="ExampleTests.TestNG_ExampleTests">
+                <methods>
+                    <include name="test_GoogleSearch"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Tested in the Firefox instance -->
+<!--    <parameter name="environment" value="local"/>-->
+<!--    <test name="ToDoApp" verbose="2" preserve-order="true" enabled="true">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name = "ToDo"></include>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="ExampleTests.TestNG_ExampleTests"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+</suite>
